@@ -1,8 +1,4 @@
-# f = [[],[0],[0],[0],[0]]
-# field = {0: f, 1: f}
-# x = 10
-# y = 10
-import random,pygame
+import random, pygame
 from handlers.images_handler import Image
 
 
@@ -63,9 +59,8 @@ class Card:
             elif self.__state == "board":
                 self.__state = self.__state
 
-
-#TODO replace this def into preparing.py
 deck = []
+#TODO replace this def into preparing.py
 def init_deck():
     id = 0
     color = ["RED", "GREEN", "BLUE", "YELLOW"]
@@ -76,7 +71,7 @@ def init_deck():
                 deck.append(Card(id=id, nom=nom, color=c, state=state))
                 id += 1
     random.shuffle(deck)
-
+    return deck
 
 #test: change_state
 #init_deck()

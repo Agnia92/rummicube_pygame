@@ -1,4 +1,4 @@
-from cards import *
+from cards import deck
 
 id = 0
 #id - is a global variable. it indicates an amount of players in the game
@@ -25,6 +25,8 @@ class Player():
             print(self.hand[i].view_all())
             print(deck[i])
         del deck[:13]
+
+
 
     def remove_card_from_hand(self, card):
         print(self.hand)
