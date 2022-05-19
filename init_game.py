@@ -13,3 +13,4 @@ cat, background, start_button = init_images(pygame.display)
 game_started = False
 back = Background()
 back.init_board()
+

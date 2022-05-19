@@ -36,7 +36,7 @@ def stop_move(direction):
 
 def do_move(obj, back):
     global move
-    if back.contains(obj.rect()):
+    if back.contains(obj.rectf()):
         if move == UP:
             print(f"Top-top...")
             obj.location[1] -= 5
@@ -67,7 +67,7 @@ def do_move(obj, back):
 def start(mouse_pos, button):
     # start_button.collidepoint(mouse_pos)
     print(init_game.game_started)
-    if button.rect().collidepoint(mouse_pos):
+    if button.rectf().collidepoint(mouse_pos):
         init_game.game_started = True
 
 

@@ -22,20 +22,20 @@ while running:
             # move and stop
             if event.type == pygame.KEYDOWN:
                 if event.scancode in move_direction:
-                    start_move(event.scancode)
+                    move = start_move(event.scancode)
 
             if event.type == pygame.KEYUP:
                 if event.scancode in move_direction:
-                    stop_move(event.scancode)
+                    move = stop_move(event.scancode)
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 take(mouse_pos)
         # print(event)
 # ACTIONS
     if init_game.game_started:
-        do_move(cat, background.rect())
+        do_move(cat, background.rect)
         move_card(mouse_pos, pygame.mouse.get_pressed())
-
+        print(cat.location)
 # DRAW
     screen.blit(background.load, background.location)
     if not init_game.game_started:
