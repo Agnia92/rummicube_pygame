@@ -5,14 +5,14 @@ from handlers.images_handler import Image
 
 class Card:
     def __init__(self, id, nom, color, state):
-        self.pos = [100, 100]
+        self.pos = [10, 10]
         self.followMouse = False
         self.followMouseOffset = [0, 0]
 
         # objImageRect = objImage.get_rect()
         # self.img_rect = objImageRect
 
-        self.size = [75, 100]
+        self.size = [64, 96]
         self.states = ["deck", "board", "hand"]
         self.id = id
         self.nom = nom
@@ -20,6 +20,8 @@ class Card:
         self.__state = state #"deck"/"board"/"hand"
         self.dict = dict(zip(["id", "nom", "color", "state"], [self.id, self.nom, self.color, self.__state]))
         self.set_img()
+
+        self.old_pos = self.pos
 
     def view_all(self):
         print(f"size: {self.size}, id: {self.id}, {self.nom}:{self.color}, {self.__state}, pos:{self.pos}, mouse{self.followMouse}, {self.followMouseOffset}")

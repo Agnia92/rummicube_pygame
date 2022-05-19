@@ -30,6 +30,7 @@ while running:
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 take(mouse_pos)
+        # print(event)
 # ACTIONS
     if init_game.game_started:
         do_move(cat, background.rect())
